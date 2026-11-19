@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Satyadeep Neupane. Senior Backend Engineer, Team Lead, Java and React. AI-Native Engineer: Agents, LLM Systems.">
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#eaeef2"/></pattern>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset="0.5" stop-color="#4f46e5"/><stop offset="1" stop-color="#0e7490"/></linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="899" height="299" rx="16" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="1" y="1" width="898" height="298" rx="16" fill="url(#dots)"/>
+  <circle cx="30" cy="30" r="6" fill="#ff5f57"/><circle cx="50" cy="30" r="6" fill="#febc2e"/><circle cx="70" cy="30" r="6" fill="#28c840"/>
+  <text x="450" y="35" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#818b98">~/satyadeep-neupane</text>
+  <text x="450" y="110" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#1f2328">Satyadeep Neupane</text>
+  <text x="450" y="146" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" fill="#59636e">Senior Backend Engineer  ·  Team Lead  ·  Java and React</text>
+  <text x="450" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="600" fill="url(#ai)">AI-Native Engineer | Agents | LLM Systems</text>
+  <line x1="300" y1="218" x2="600" y2="218" stroke="#d0d7de"/>
+  <text x="450" y="248" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#59636e">6+ years designing and shipping production systems.</text>
+  <text x="450" y="270" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#59636e">Now building AI agents and LLM-powered product features.</text>
+</svg>

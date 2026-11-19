@@ -1,0 +1,43 @@
+name: Hide expired certification
+
+# Claude Certified Architect – Foundations expires on 2027-08-01.
+# From 2027-07-31 onwards this removes the certification pill and the Credly link.
+# If you renew, update CERT_HIDE_FROM below (or delete this workflow).
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # daily at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  CERT_HIDE_FROM: "2027-07-31"
+
+jobs:
+  hide-cert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove certification once it is about to expire
+        run: |
+          today=$(date -u +%F)
+          if [[ "$today" < "$CERT_HIDE_FROM" ]]; then
+            echo "Certification still valid ($today < $CERT_HIDE_FROM). Nothing to do."
+            exit 0
+          fi
+          if ! grep -q 'cert:start' README.md; then
+            echo "Certification already removed."
+            exit 0
+          fi
+          # Drop the Credly link block and switch to the header without the pill.
+          sed -i '/<!-- cert:start -->/,/<!-- cert:end -->/d' README.md
+          mv assets/header-no-cert.svg assets/header.svg
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Remove expired Claude certification from profile"
+          git push
